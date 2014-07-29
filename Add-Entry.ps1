@@ -25,7 +25,7 @@ $formattedDate = (Get-Date $effectiveDate).GetDateTimeFormats("r");
 $entryContainer = $xml.createElement("entryContainer");
 $entryContainer.set_InnerXML("<entry name='$name' uri='$uri' length='$effectiveAudioLength' date='$formattedDate'/>");
 $xml.podcast.AppendChild($entryContainer.entry);
-$xml.podcast.lastUpdated = (Get-Date).GetDateTimeFormats("r");
+$xml.podcast.lastUpdated = (Get-Date).GetDateTimeFormats("r")[0];
 
 $xml.outerXML | Out-File $xmlPath -Encoding utf8
 

@@ -12,7 +12,7 @@
 				<language>en-us</language>
 				<copyright><xsl:value-of select="@descriptionUri"/></copyright>
 				<lastBuildDate><xsl:value-of select="@lastUpdated"/></lastBuildDate>
-				<itunes:image href="@imageUri" />
+				<itunes:image href="{@imageUri}" />
 				<itunes:explicit>yes</itunes:explicit>
 				<xsl:apply-templates select="entry"/>
 			</channel>
