@@ -10,7 +10,7 @@
 				<link><xsl:value-of select="@descriptionUri"/></link>
 				<description><xsl:value-of select="@description"/></description>
 				<language>en-us</language>
-				<copyright><xsl:value-of select="@descriptionUri"/></copyright>
+				<copyright><xsl:value-of select="@copyright"/></copyright>
 				<lastBuildDate><xsl:value-of select="@lastUpdated"/></lastBuildDate>
 				<itunes:image href="{@imageUri}" />
 				<itunes:explicit>yes</itunes:explicit>
