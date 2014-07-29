@@ -12,14 +12,8 @@
 				<language>en-us</language>
 				<copyright><xsl:value-of select="@descriptionUri"/></copyright>
 				<lastBuildDate><xsl:value-of select="@lastUpdated"/></lastBuildDate>
-				<!-- itunes:author></itunes:author>
-				<itunes:owner>
-					<itunes:name></itunes:name>
-					<itunes:email></itunes:email>
-				</itunes:owner -->
-				<itunes:image href="http://hw1.pa-cdn.com/pa/assets/podcasts/itunes_pa_dlc.jpg" />
+				<itunes:image href="@imageUri" />
 				<itunes:explicit>yes</itunes:explicit>
-				<!-- itunes:category text="Games &amp; Hobbies" / -->
 				<xsl:apply-templates select="entry"/>
 			</channel>
 		</rss>
@@ -27,11 +21,10 @@
 	<xsl:template match="entry">
 		<item>
 			<title><xsl:value-of select="@name"/></title>
-			<!-- itunes:author></itunes:author -->
 			<link><xsl:value-of select="@uri"/></link>
 			<enclosure url="{@uri}" length="{@length}" type="audio/mpeg" />
 			<description></description>
-			<pubDate><xsl:value-of select="@uri"/></pubDate>
+			<pubDate><xsl:value-of select="@date"/></pubDate>
 			<guid isPermaLink="false"><xsl:value-of select="@uri"/></guid>
 		</item>
 	</xsl:template>
